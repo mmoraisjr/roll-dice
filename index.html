@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roll Dice</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <p>Roll Dice</p>
+      <p>Roll Dice</p>
     </header>
 
     <main>
-        <div class="inputs">
-            <label for="qtd-dice">Amount of dice:</label>
-            <input type="number" id="qtd-dice" name="qtd-dice" placeholder="Insert number here">
-            <label for="qtd-faces">Number of dice faces:</label>
-            <input type="number" id="qtd-face" name="qtd-face" placeholder="Insert number here">
-            
-        </div>
+      <div class="inputs">
+        <label for="qt-dice">Amount of dice:</label>
+        <input
+          type="number"
+          class="input__dice"
+          name="qt-dice"
+          placeholder="Insert number here"
+        />
+        <label for="qt-faces">Number of dice faces:</label>
+        <input
+          type="number"
+          class="input__face"
+          name="qt-face"
+          placeholder="Insert number here"
+        />
+      </div>
 
-        <div class="dices">
-            <p>Dices</p>
-            <p></p>
-        </div>
+      <div class="dices">
+        <p class="square-dice">Dices</p>
+        <p></p>
+      </div>
 
-        <div>
-            <button>Roll</button>
-        </div>
+      <button type="button" value="ok" class="roll">Roll</button>
 
-        <div class="result">
-            <p>Total</p>
-            <p></p>
-        </div>
+      <div class="result">
+        <p>Total</p>
+        <p></p>
+      </div>
     </main>
 
     <footer>
 
     </footer>
-</body>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
