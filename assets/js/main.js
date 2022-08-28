@@ -1,24 +1,28 @@
-var inputDice = document.querySelector(".input__dice");
-var inputFace = document.querySelector(".input__face");
-var showDices = document.querySelector(".dices");
-var btn = document.querySelector(".roll");
-
-console.log(inputDice);
-console.log(inputFace);
-
-var dices;
-var faces;
+const inputDice = document.querySelector(".input__dice");
+const inputFace = document.querySelector(".input__face");
+const showDices = document.querySelector(".dices");
+const btn = document.querySelector(".roll");
 
 btn.addEventListener("click", () => addDice());
 
 const addDice = () => {
-  dices = inputDice.value;
-  faces = inputFace.value;
-  ok = btn.value;
+  const dices = inputDice.value;
+  const faces = inputFace.value;
+  var result;
 
-  console.log(dices);
-  console.log(faces);
+  if (dices > 10) {
+    console.log("o número máximo de dados é 10.");
+  } else {
+    for (let i = 0; i < dices; i++) {
+      result = Math.floor(Math.random() * faces) + 1;
+      console.log(result);
+      const newDice = document.createElement("p");
+      newDice.classList.add("square-dice")
+      newDice.textContent = result;
+      newDice.appendChild(showDices);
+    }
+  }
+  const total = document.createElement("p");
+  total.classList.add("total");
+  total.textContent = result;
 };
-
-console.log(dices);
-console.log(faces);
