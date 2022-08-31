@@ -15,6 +15,7 @@ const addDice = () => {
   var sumDices = 0;
 
   showDices.innerHTML = "";
+  showSum.innerHTML = "";
 
   if (dices > 10) {
     console.log("O número máximo de dados é 10.");
@@ -33,12 +34,17 @@ const addDice = () => {
     }
   }
 
-  oldDices.push(sumDices);
-  localStorage.setItem("oldDices", JSON.stringify(oldDices));
-  for (let i = 0; i < oldDices.length; i++) {
-    const showSumDices = document.createElement("p");
-    // console.log(oldDices[i]);
-    showSumDices.textContent = oldDices[i];
-    showSum.appendChild(showSumDices);
-  }
+  const showSumDices = document.createElement("p");
+  showSumDices.textContent = sumDices;
+  showSum.appendChild(showSumDices);
+
+  // função para resgatar somatória dos dados já lançacos
+  // oldDices.push(sumDices);
+  // localStorage.setItem("oldDices", JSON.stringify(oldDices));
+  // for (let i = 0; i < oldDices.length; i++) {
+  //   const showSumDices = document.createElement("p");
+  //   // console.log(oldDices[i]);
+  //   showSumDices.textContent = oldDices[i];
+  //   showSum.appendChild(showSumDices);
+  // }
 };
