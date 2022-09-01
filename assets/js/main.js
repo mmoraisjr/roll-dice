@@ -3,8 +3,7 @@ const inputFace = document.querySelector(".input__face");
 const showDices = document.querySelector(".dices");
 const showSum = document.querySelector(".result");
 const btn = document.querySelector(".roll");
-// const faces = document.querySelectorAll(".face");
-const oldDices = JSON.parse(localStorage.getItem("oldDices")) || [];
+//const oldDices = JSON.parse(localStorage.getItem("oldDices")) || [];
 
 btn.addEventListener("click", () => addDice());
 

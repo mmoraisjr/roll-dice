@@ -11,6 +11,19 @@ button {
     width: 95%;
 }
 
+button:hover {
+    background-color: var(--preto1);
+    border-radius: 5px;
+    color: whitesmoke;
+    font-family: var(--fonte);
+    font-size: 1.25rem;
+    height: 2.5rem;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    width: 95%;
+}
+
 
 input {
     border-radius: 5px;
