@@ -11,6 +11,7 @@ button {
     width: 95%;
 }
 
+
 input {
     border-radius: 5px;
     height: 45px;
@@ -23,11 +24,23 @@ input {
 main {
     height: calc(95vh - 220px);
     width: 350px;
-
+    
 }
 
 .error {
+    border: 2px solid rgba(179, 9, 9, 0.63);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 2rem;
+    padding: 1rem;
+}
+
+.error i {
+color: rgb(224, 28, 28);
+font-size: 1.5rem;
+    padding: 1rem;
 }
 
 .input {

@@ -18,17 +18,31 @@ const addDice = () => {
   showSum.innerHTML = "";
 
   if (dices > 10) {
+    const msgErro = document.createElement("div")
+    msgErro.classList.add("error");
     const erro = document.createElement("p");
     erro.textContent = "The value must be less than 10";
-    erro.classList.add("error")
-    showSum.appendChild(erro);
+    const iErro = document.createElement("i");
+    iErro.classList.add("fa-sharp");
+    iErro.classList.add("fa-solid");
+    iErro.classList.add("fa-circle-exclamation");
+    msgErro.appendChild(erro);
+    msgErro.appendChild(iErro);
+    showSum.appendChild(msgErro);
     return;
   }
   if (dices == 0 || faces == 0 || dices === "" || faces === "") {
+    const msgErro = document.createElement("div")
+    msgErro.classList.add("error");
     const erro = document.createElement("p");
-    erro.classList.add("error")
     erro.textContent = "Fill in all fields";
-    showSum.appendChild(erro);
+    const iErro = document.createElement("i");
+    iErro.classList.add("fa-sharp");
+    iErro.classList.add("fa-solid");
+    iErro.classList.add("fa-circle-exclamation");
+    msgErro.appendChild(erro);
+    msgErro.appendChild(iErro);
+    showSum.appendChild(msgErro);
     return;
   } else {
     for (let i = 0; i < dices; i++) {
