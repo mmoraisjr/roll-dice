@@ -3,12 +3,12 @@
 
 footer {
     background-color: var(--preto1);
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px;
     height: 120px;
     margin-top: 1.5rem;
     padding: 1rem;
     text-align: center;
-    text-shadow: .1rem .1rem #333;
+    text-shadow: .15rem .15rem rgb(63, 62, 62);
     width: 100%;
 }
 
