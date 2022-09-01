@@ -18,12 +18,19 @@ const addDice = () => {
   showSum.innerHTML = "";
 
   if (dices > 10) {
-    console.log("O número máximo de dados é 10.");
-    return
-  }if(dices == 0 || faces == 0 || dices === "" || faces === ""){
-    console.log("Preencha os campos com um valor válido");
-    return
-  }else{
+    const erro = document.createElement("p");
+    erro.textContent = "The value must be less than 10";
+    erro.classList.add("error")
+    showSum.appendChild(erro);
+    return;
+  }
+  if (dices == 0 || faces == 0 || dices === "" || faces === "") {
+    const erro = document.createElement("p");
+    erro.classList.add("error")
+    erro.textContent = "Fill in all fields";
+    showSum.appendChild(erro);
+    return;
+  } else {
     for (let i = 0; i < dices; i++) {
       faceDice = Math.floor(Math.random() * faces) + 1;
       const newDice = document.createElement("p");
