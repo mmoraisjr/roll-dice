@@ -18,7 +18,7 @@ const addDice = () => {
   showSum.innerHTML = "";
 
   if (dices > 10) {
-    const msgErro = document.createElement("div")
+    const msgErro = document.createElement("div");
     msgErro.classList.add("error");
     const erro = document.createElement("p");
     erro.textContent = "The value must be less than 10";
@@ -32,7 +32,7 @@ const addDice = () => {
     return;
   }
   if (dices == 0 || faces == 0 || dices === "" || faces === "") {
-    const msgErro = document.createElement("div")
+    const msgErro = document.createElement("div");
     msgErro.classList.add("error");
     const erro = document.createElement("p");
     erro.textContent = "Fill in all fields";
@@ -55,9 +55,15 @@ const addDice = () => {
     }
   }
 
+  const divSumDices = document.createElement("div");
+  divSumDices.classList.add("div-sum-dices");
+  const labelSumDices = document.createElement("p");
   const showSumDices = document.createElement("p");
+  labelSumDices.textContent = "Total:  ";
   showSumDices.textContent = sumDices;
-  showSum.appendChild(showSumDices);
+  divSumDices.appendChild(labelSumDices);
+  divSumDices.appendChild(showSumDices);
+  showSum.appendChild(divSumDices);
 
   // função para resgatar somatória dos dados já lançacos
   // oldDices.push(sumDices);
