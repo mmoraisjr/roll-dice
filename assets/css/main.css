@@ -1,0 +1,32 @@
+@import url(_reset.css);
+@import url(_style.css);
+
+input {
+    width: 25px;
+    height: 25px;
+}
+
+label {
+
+}
+
+main {
+    margin: auto 0;
+    padding: 250px 0;
+    width: 350px;
+}
+
+.inputs {
+    padding: auto;
+    margin: 0;
+}
+
+.input__dice {
+    display: flex;
+    flex-direction: row;
+}
+
+.input__face {
+    display: flex;
+    flex-direction: row;
+}

@@ -27,7 +27,7 @@ const addDice = () => {
     for (let i = 0; i < dices; i++) {
       faceDice = Math.floor(Math.random() * faces) + 1;
       const newDice = document.createElement("p");
-      newDice.classList.add("face");
+      newDice.classList.add("dices__face");
       newDice.textContent = faceDice;
       showDices.appendChild(newDice);
       sumDices += faceDice;
