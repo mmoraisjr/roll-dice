@@ -21,7 +21,7 @@ button:hover {
     margin: 0 auto;
     cursor: pointer;
     text-align: center;
-    width: 95%;
+    width: 100%;
 }
 
 
@@ -36,12 +36,14 @@ input {
 
 main {
     height: calc(125vh - 220px);
+    margin-top: 2rem;
     width: 350px;
 
 }
 
 .dices {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
     font-size: 2.5rem;
     justify-content: center;
